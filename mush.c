@@ -9,6 +9,12 @@ int main(){
     while(1==1){
         printf("directory:\n");
         fgets(buffer, 2048, stdin);
+        char* buf="";
+        buf=strtok(buffer," ");
+        while(buf!=NULL){
+            puts(buf);
+            buf=strtok(NULL," ");
+        }
         printf("%s",buffer);
     }
 }
